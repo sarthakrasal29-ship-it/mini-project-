@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <conio.h>
+#include <dos.h>
+
+void displayRobot(int x)
+{
+    textcolor(LIGHTCYAN);
+
+    gotoxy(x,10);
+    cprintf(" /----\\");
+
+    gotoxy(x,11);
+    cprintf("| AUTO |");
+
+    gotoxy(x,12);
+    cprintf(" \\----/");
+
+    textcolor(YELLOW);
+
+    gotoxy(x,13);
+    cprintf("O O O");
+
+    textcolor(LIGHTGREEN);
+
+    gotoxy(x+3,14);
+    cprintf("|");
+
+    /* Continuation from page 4 */
+
+    {
+        textcolor(LIGHTCYAN);
+
+        gotoxy(30,24);
+        cprintf("WHEELS: RUNNING");
+    }
+
+    delay(100);
+    }
+
+    textcolor(YELLOW);
+
+    gotoxy(20,22);
+    cprintf("SYSTEM: DESTINATION FOUND!");
+
+    textcolor(LIGHTGREEN);
+
+    gotoxy(29,25);
+    cprintf("ROBOT STOPPED SUCCESSFULLY");
+
+    getch();
+}
